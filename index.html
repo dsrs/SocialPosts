@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/socialpost.png" />
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <div class="titleHeader">
+            <img class="iconSocial" src="./img/socialpost.png" alt="icon-logo">
+            <h1 class="titlePage">Social Post</h1>
+        </div>
+
+        <nav class="navHeader">
+            <ul class="menu">
+                <li class="menu__item">
+                    <a class="men__item__link" onclick="ShowGlide()">Home</a>
+                </li>
+                <li class="menu__item">
+                    <p class="menu__item__p">Search User</p>
+                </li>
+                <li class="menu__item">
+                    <input id="search" type="text" placeholder="Search.." value="">
+                    <button id="botonsearch" onclick="searchProfile()"> <img class="men__item__link icon2" src="./img/search.png" alt="icon-search"></></button>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div id="main">
+        <div id="cardUser">
+            <div id="imagen"></div>
+            <div id="informacion"></div>
+            <div id="post"></div>
+        </div>
+    </div>
+
+    <div class="glide" id="contentGlide">
+
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides ">
+                
+                <li class="glide__slideInitial">
+                        <picture> 
+                            <source media="(min-width:640px)" srcset="https://i.picsum.photos/id/866/1600/600.jpg?hmac=DD652ILxTQ0dqjcwjxuqzUXjqa6kc2n9zKnR-D7Evps">
+                            <img src="https://i.picsum.photos/id/58/350/500.jpg?hmac=V3Kmt2Pv1Y4rYDCQoF6LZIy2PHKlhj6cFknTXFPBoMM" alt="">
+                        </picture>
+                    </li>
+                    <li class="glide__slideInitial">
+                        <picture> 
+                            <source media="(min-width:640px)" srcset="https://i.picsum.photos/id/900/1600/600.jpg?hmac=Fok5CyTkfYddNtEQJpWgVJLbMOz82hl36fMCQ8TQlJw">
+                            <img src="https://i.picsum.photos/id/606/350/500.jpg?hmac=TD9M1OGQEJGYRkf-PYG6nMuigjIxJavzCJQC0zHB-eA" alt="">
+                        </picture>
+                    </li>
+                    <li class="glide__slideInitial">
+                        <picture> 
+                            <source media="(min-width:640px)" srcset="https://i.picsum.photos/id/301/1600/600.jpg?hmac=PemMDNVSZAEYjqdhZsNQ4NZDMBrLOCigT4rPASM-vt4">
+                            <img src="https://i.picsum.photos/id/188/350/500.jpg?hmac=kq6OSlcAbqr25pL971qmlpWcnTQQvwvfhXlVKc6JY7M" alt="">
+                        </picture>
+                    </li>
+                    <li class="glide__slideInitial">
+                        <picture> 
+                            <source media="(min-width:640px)" srcset="https://i.picsum.photos/id/757/1600/600.jpg?hmac=SnWzfYcOAj3YTtba-wpg0DNF8tfkBTu9lLoeYRxG-Z8">
+                            <img src="https://i.picsum.photos/id/740/350/500.jpg?hmac=TccghVOGpL2AiQ0gX0Xn2qVvpMigmIK7TcVU4RAoRZk" alt="">
+                        </picture>
+                    </li>
+            </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&lt;</button>
+            <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&gt;</button>
+        </div>
+        <div class="title-banner">
+                <h1 class="text5">SEMILLERO PRUEBA HTML-CSS-JS</h1>
+                <h2>Consulta de perfiles <br> Post y comentarios por usuario. </h2>
+            </div>
+
+    </div>
+
+    <footer>
+        <div class="credits"> © 2021 - Semillero All Right Reserved</div>
+        <div class="social">
+            <img class="icon-footer" src="./img/facebook.png" alt="facebook">
+            <img class="icon-footer" src="./img/twitter.png" alt="Twitter">
+            <img class="icon-footer" src="./img/linkedin.png" alt="Linkedin">
+            <img class="icon-footer" src="./img/google.png" alt="Google-plus">
+            <img class="icon-footer" src="./img/youtube.png" alt="Youtube">
+
+        </div>
+
+    </footer>
+
+    <script src="./script.js">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide">
+    </script>
+    <script>
+        if (screen.width < 600) {
+            const config = {
+                type: 'carousel',
+                perView: 1,
+                autoplay: 2000,
+                hoverpause: false,
+
+            };
+            new Glide('.glide', config).mount()
+
+        } else if (screen.width > 600) {
+            const config = {
+                type: 'carousel',
+                perView: 1,
+                autoplay: 2000,
+                hoverpause: false,
+
+            };
+            new Glide('.glide', config).mount()
+        }
+    </script>
+
+</body>
+
+</html>
